@@ -1,0 +1,241 @@
+/* Definindo a paleta de cores personalizada */
+:root {
+    --bs-primary: #00AEEF; /* Azul Claro */
+    --bs-secondary: #4CAF50; /* Verde */
+    --bs-light: #F5F5F5; /* Cinza Claro */
+    --bs-white: #FFFFFF; /* Branco */
+    --bs-warning: #FF9800; /* Laranja para chamadas à ação */
+    --bs-info: #FFC107; /* Amarelo para destaques */
+    --bs-dark-gray: #333333; /* Cinza Escuro */
+
+    --bs-primary-rgb: 0, 174, 239;
+    --bs-secondary-rgb: 76, 175, 80;
+    --bs-light-rgb: 245, 245, 245;
+    --bs-white-rgb: 255, 255, 255;
+    --bs-warning-rgb: 255, 152, 0;
+    --bs-info-rgb: 255, 193, 7;
+    --bs-dark-gray-rgb: 51, 51, 51;
+}
+
+/* Corpo e fundo */
+body {
+    background-color: var(--bs-light);
+    color: var(--bs-dark-gray); /* Mudando cor para cinza escuro */
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bs-primary) !important;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--bs-white) !important;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+    color: var(--bs-info) !important;
+}
+
+/* Header */
+header {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white);
+}
+
+header h1, header p {
+    color: var(--bs-white);
+}
+
+header .btn-primary {
+    background-color: var(--bs-warning);
+    border-color: var(--bs-warning);
+}
+
+header .btn-outline-light {
+    color: var(--bs-white);
+    border-color: var(--bs-white);
+}
+
+/* Seção de Características */
+#features {
+    background-color: var(--bs-white);
+    color: var(--bs-dark-gray); /* Mudando cor para cinza escuro */
+}
+
+.feature {
+    background-color: var(--bs-info);
+}
+
+.feature h2, .feature p, .feature a {
+    color: var(--bs-dark-gray); /* Mudando cor para cinza escuro */
+}
+
+/* Seção de Preços */
+.bg-light {
+    background-color: var(--bs-light) !important;
+}
+
+h2.fw-bolder, p.lead {
+    color: var(--bs-dark-gray); /* Mudando cor para cinza escuro */
+}
+
+/* Footer */
+footer {
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+/* Gradientes */
+.gradient-blue-green {
+    background: linear-gradient(180deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+}
+
+.gradient-dark-light {
+    background: linear-gradient(180deg, #003366 0%, var(--bs-primary) 100%);
+}
+
+.navbar-toggler-custom {
+    padding: 0.25rem 0.5rem; /* Ajusta o tamanho do padding */
+    font-size: 0.75rem; /* Diminui o ícone */
+}
+
+.justificado {
+    text-align: justify;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do ícone */
+    border-radius: 50%;
+    width: 40px; /* Tamanho menor */
+    height: 40px; /* Tamanho menor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* Tamanho menor do ícone */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.back-to-top.show {
+    opacity: 1;
+}
+
+.about-image img {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave para a imagem */
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 767px) {
+    .about-image {
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.card {
+    border: 1px solid #ddd; /* Cor da borda */
+    border-radius: 0.5rem; /* Arredondamento dos cantos */
+    padding: 1.5rem; /* Espaçamento interno */
+}
+
+.card-body {
+    padding: 2rem; /* Espaçamento interno do corpo do card */
+}
+
+.card-price {
+    font-size: 1.5rem; /* Tamanho da fonte do preço */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Tamanho da fonte do título */
+}
+
+.custom-card {
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-body ul {
+    padding-left: 1.5rem;
+}
+
+.card-body .btn {
+    margin-top: 1rem;
+}
+
+
+/* Estilos gerais para os campos de formulário */
+.form-control {
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Estilos para labels flutuantes */
+.form-group {
+    position: relative;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+    top: -0.75rem;
+    left: 0.15rem;
+    font-size: 0.875rem;
+    color: var(--bs-primary);
+}
+
+/* Estilizando os labels */
+.form-group label {
+    font-weight: bold; /* Deixa o texto mais destacado */
+    color: var(--bs-dark-gray); /* Cor escura para maior contraste */
+    display: block; /* Garante que o label ocupe toda a largura disponível */
+    margin-bottom: 0.5rem; /* Espaçamento abaixo do label */
+    position: relative; /* Para adicionar um efeito de foco */
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label {
+    color: var(--bs-primary); /* Cor quando o campo está focado */
+    transform: translateY(-1.5rem); /* Move o label para cima ao focar */
+    font-size: 0.9rem; /* Reduz o tamanho da fonte quando o campo está focado */
+}
+
+/* Adicionando efeito de foco ao campo */
+.form-control:focus {
+    border-color: var(--bs-primary); /* Cor da borda ao focar */
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25); /* Efeito de sombra */
+}
+
+textarea.form-control {
+    width: 100%; /* Garante que o textarea use toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+
+
