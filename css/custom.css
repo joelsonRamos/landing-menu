@@ -267,5 +267,15 @@ textarea.form-control {
 }
 
 
+/* Estilo para os botões "Começar" na navbar */
+.navbar-start-btn {
+    background-color: var(--bs-warning) !important; /* Laranja */
+    border-color: var(--bs-warning) !important; /* Laranja */
+    color: var(--bs-white) !important; /* Cor do texto branco */
+}
 
+.navbar-start-btn:hover {
+    background-color: darken(var(--bs-warning), 10%) !important; /* Escurece a cor ao passar o mouse */
+    border-color: darken(var(--bs-warning), 10%) !important; /* Escurece a borda ao passar o mouse */
+}
 
