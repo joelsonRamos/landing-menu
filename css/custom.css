@@ -237,5 +237,35 @@ textarea.form-control {
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
 }
 
+/* Estilo para a navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Garante que o logo e a navbar-right sejam separados */
+}
+
+/* Estilo para a navbar-right */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Faz com que a navbar-right fique na extremidade direita */
+}
+
+/* Estilo específico para o botão "Começar" e navbar-toggler */
+.navbar-start-btn {
+    margin-left: 1rem; /* Espaçamento entre os botões */
+}
+
+.navbar-toggler-custom {
+    margin-left: 1rem; /* Espaçamento entre o botão de colapso e o botão "Começar" */
+}
+
+/* Estilo para telas grandes */
+@media (min-width: 992px) {
+    .navbar-brand {
+        flex-grow: 1; /* Faz com que o logo ocupe o espaço disponível à esquerda */
+    }
+}
+
+
 
 
