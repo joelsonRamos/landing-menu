@@ -298,3 +298,16 @@ textarea.form-control {
     margin-left: auto !important; /* Força o alinhamento à direita */
 }
 
+@media (max-width: 400px) {
+    .btn-comecar {
+        font-size: 1rem; /* Ajustar o tamanho do texto do botão */
+        padding: 0.8rem 1.5rem; /* Reduzir o padding para caber melhor */
+    }
+    h1 {
+        font-size: 1.8rem; /* Ajuste conforme necessário */
+    }
+
+    p {
+        font-size: 1rem; /* Diminuir o texto do parágrafo */
+    }
+}
