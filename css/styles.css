@@ -671,16 +671,16 @@ progress {
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-top: calc(-2* var(--bs-gutter-y));
-  margin-right: calc(-1.5* var(--bs-gutter-x));
-  margin-left: calc(-1.5* var(--bs-gutter-x));
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 .row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x)* 1);
-  padding-left: calc(var(--bs-gutter-x)* 1);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -3812,6 +3812,7 @@ textarea.form-control-lg {
 
 .navbar-collapse {
   flex-basis: 100%;
+  flex-grow: 1;
   align-items: center;
 }
 
