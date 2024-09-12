@@ -279,3 +279,22 @@ textarea.form-control {
     border-color: darken(var(--bs-warning), 10%) !important; /* Escurece a borda ao passar o mouse */
 }
 
+/* Garantir que os botões estejam alinhados à direita */
+.navbar .navbar-buttons {
+    margin-left: auto !important; /* Alinha os botões à direita */
+    margin-right: 8px !important;
+}
+
+/* Garantir que o contêiner da navbar use o layout de espaço entre itens */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Se o contêiner de botões ainda não se mover, ajuste o estilo */
+.navbar .navbar-buttons {
+    display: flex; /* Certifique-se de que o contêiner de botões usa flexbox */
+    margin-left: auto !important; /* Força o alinhamento à direita */
+}
+
