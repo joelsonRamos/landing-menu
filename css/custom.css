@@ -7,6 +7,7 @@
     --bs-warning: #FF9800; /* Laranja para chamadas à ação */
     --bs-info: #FFC107; /* Amarelo para destaques */
     --bs-dark-gray: #333333; /* Cinza Escuro */
+    --bs-medium-gray: #888888; /* Cinza Intermediário */
 
     --bs-primary-rgb: 0, 174, 239;
     --bs-secondary-rgb: 76, 175, 80;
@@ -205,7 +206,7 @@ footer {
 /* Reduz o tamanho do texto do placeholder */
 .form-control::placeholder {
     font-size: 1rem; /* Reduz o tamanho da fonte do placeholder */
-    color: var(--bs-dark-gray); /* Ajusta a cor, se necessário */
+    color: var(--bs-medium-gray); /* Ajusta a cor, se necessário */
 }
 
 /* Estilos para labels flutuantes */
@@ -250,7 +251,7 @@ textarea.form-control {
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
 }
 
-.lead {
+.lead-form {
     font-size: 1rem; /* Ajuste o tamanho da fonte */
     line-height: 1.5; /* Ajusta a altura da linha */
     margin-bottom: 1rem; /* Ajusta o espaçamento abaixo do parágrafo */
