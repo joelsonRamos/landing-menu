@@ -282,7 +282,7 @@ textarea.form-control {
 /* Garantir que os botões estejam alinhados à direita */
 .navbar .navbar-buttons {
     margin-left: auto !important; /* Alinha os botões à direita */
-    margin-right: 8px !important;
+    margin-right: 0.5rem !important;
 }
 
 /* Garantir que o contêiner da navbar use o layout de espaço entre itens */
