@@ -96,3 +96,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  // Adiciona um event listener a cada link
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // Remove a classe 'active' de todos os links
+      navLinks.forEach(link => link.classList.remove('active'));
+      
+      // Adiciona a classe 'active' ao link clicado
+      this.classList.add('active');
+    });
+  });
+
+
+  // Seleciona o botão "Começar" no mobile e o menu colapsável
+  const startButton = document.querySelector('.navbar-start-btn.d-lg-none');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+
+  // Adiciona um event listener ao botão "Começar"
+  startButton.addEventListener('click', function() {
+    // Verifica se o menu colapsável está aberto
+    if (navbarCollapse.classList.contains('show')) {
+      // Remove a classe 'show' para fechar o menu
+      const collapse = new bootstrap.Collapse(navbarCollapse);
+      collapse.hide();
+    }
+  });
