@@ -94,6 +94,31 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault(); // Impede o envio do formulário se não for válido
         }
     });
+
+    var contactModal = document.getElementById('contactModal');
+    var closeButton = contactModal.querySelector('.custom-btn-close');
+    var closeButtonUm = contactModal.querySelector('.custom-btn-close-um');
+    var contactForm = document.getElementById('contactForm');
+    var errorMessages = contactForm.querySelectorAll('.text-danger');
+
+    closeButton.addEventListener('click', function () {
+        // Limpar campos do formulário
+        contactForm.reset();
+        
+        // Ocultar mensagens de erro
+        errorMessages.forEach(function (msg) {
+            msg.style.display = 'none';
+        });
+    });
+    closeButtonUm.addEventListener('click', function () {
+        // Limpar campos do formulário
+        contactForm.reset();
+        
+        // Ocultar mensagens de erro
+        errorMessages.forEach(function (msg) {
+            msg.style.display = 'none';
+        });
+    });
 });
 
 

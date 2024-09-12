@@ -103,6 +103,7 @@ footer {
     text-align: justify;
 }
 
+/* Estilo para o botão "Voltar ao topo" */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -122,13 +123,20 @@ footer {
     text-decoration: none;
 }
 
+.back-to-top i {
+    color: white; /* Garante que o ícone dentro do botão fique branco */
+}
+
+/* Estilo quando passando o mouse sobre o botão */
 .back-to-top:hover {
     background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
 }
 
+/* Estilo quando o botão está visível */
 .back-to-top.show {
     opacity: 1;
 }
+
 
 .about-image img {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave para a imagem */
@@ -190,11 +198,14 @@ footer {
     border: 1px solid #ddd;
     box-shadow: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    padding: 0.75rem 1rem; /* Ajusta o padding para melhor espaçamento interno */
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte do campo */
 }
 
-.form-control:focus {
-    border-color: var(--bs-primary);
-    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+/* Reduz o tamanho do texto do placeholder */
+.form-control::placeholder {
+    font-size: 1rem; /* Reduz o tamanho da fonte do placeholder */
+    color: var(--bs-dark-gray); /* Ajusta a cor, se necessário */
 }
 
 /* Estilos para labels flutuantes */
@@ -217,13 +228,14 @@ footer {
     display: block; /* Garante que o label ocupe toda a largura disponível */
     margin-bottom: 0.5rem; /* Espaçamento abaixo do label */
     position: relative; /* Para adicionar um efeito de foco */
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte do label */
 }
 
 .form-group input:focus + label,
 .form-group textarea:focus + label {
     color: var(--bs-primary); /* Cor quando o campo está focado */
     transform: translateY(-1.5rem); /* Move o label para cima ao focar */
-    font-size: 0.9rem; /* Reduz o tamanho da fonte quando o campo está focado */
+    font-size: 0.8rem; /* Reduz o tamanho da fonte do label quando o campo está focado */
 }
 
 /* Adicionando efeito de foco ao campo */
@@ -232,9 +244,16 @@ footer {
     box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25); /* Efeito de sombra */
 }
 
+
 textarea.form-control {
     width: 100%; /* Garante que o textarea use toda a largura disponível */
     box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+.lead {
+    font-size: 1rem; /* Ajuste o tamanho da fonte */
+    line-height: 1.5; /* Ajusta a altura da linha */
+    margin-bottom: 1rem; /* Ajusta o espaçamento abaixo do parágrafo */
 }
 
 /* Estilo para a navbar */
@@ -311,3 +330,69 @@ textarea.form-control {
         font-size: 1rem; /* Diminuir o texto do parágrafo */
     }
 }
+
+
+.custom-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o texto */
+  }
+  
+  .custom-modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3d48ba; /* Cor do título */
+  }
+  
+  .custom-header-content p {
+    font-size: 16px; /* Ajuste o tamanho do subtítulo */
+    margin-top: 8px; /* Espaço entre o título e o subtítulo */
+  }
+  
+
+  .custom-input {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .custom-btn-submit {
+    background-color: var(--bs-primary); /* Cor de fundo igual ao botão de navegação */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Padding do botão */
+    border: none; /* Remove a borda */
+    border-radius: 0.25rem; /* Raio da borda */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição para o hover */
+}
+
+.custom-btn-submit:hover {
+    background-color: var(--bs-primary-dark); /* Cor do fundo no hover */
+}
+
+.custom-btn-close {
+    background-color: red; /* Cor de fundo vermelha */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 0.25rem; /* Raio da borda */
+    padding: 10px; /* Padding do botão */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.custom-btn-close:hover {
+    background-color: darkred; /* Cor de fundo no hover */
+}
+  
+.custom-modal-footer {
+    display: flex; /* Define o layout flexível */
+    justify-content: flex-end; /* Alinha os botões ao final do rodapé */
+    gap: 0.5rem; /* Ajusta o espaçamento entre os botões */
+}
+
+/* Ajuste adicional para os botões, se necessário */
+.custom-modal-footer .btn {
+    margin: 0; /* Remove margens adicionais, se houver */
+}
+  
+
+
+
