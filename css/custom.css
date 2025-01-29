@@ -1,21 +1,22 @@
 /* Definindo a paleta de cores personalizada */
 :root {
-    --bs-primary: #00AEEF; /* Azul Claro */
-    --bs-secondary: #4CAF50; /* Verde */
-    --bs-light: #F5F5F5; /* Cinza Claro */
+    --bs-primary: #355C7D; /* Novo Vermelho */
+    --bs-secondary: #355C7D; /* Novo Azul Escuro */
+    --bs-light: #F5F5F5; /* Novo Laranja */
     --bs-white: #FFFFFF; /* Branco */
-    --bs-warning: #FF9800; /* Laranja para chamadas à ação */
-    --bs-info: #FFC107; /* Amarelo para destaques */
-    --bs-dark-gray: #333333; /* Cinza Escuro */
-    --bs-medium-gray: #888888; /* Cinza Intermediário */
+    --bs-warning: #29D8F; /* Nova Cor de Ação (Corrigida no hex para #029D8F) */
+    --bs-info: #FFF; /* Branco para Destaques */
+    --bs-dark-gray: #333333; /* Cinza Escuro Original */
+    --bs-medium-gray: #888888; /* Cinza Intermediário Original */
 
-    --bs-primary-rgb: 0, 174, 239;
-    --bs-secondary-rgb: 76, 175, 80;
-    --bs-light-rgb: 245, 245, 245;
+    --bs-primary-rgb: 230, 57, 70;
+    --bs-secondary-rgb: 53, 92, 125;
+    --bs-light-rgb: 255, 177, 66;
     --bs-white-rgb: 255, 255, 255;
-    --bs-warning-rgb: 255, 152, 0;
-    --bs-info-rgb: 255, 193, 7;
+    --bs-warning-rgb: 2, 157, 143;
+    --bs-info-rgb: 255, 255, 255;
     --bs-dark-gray-rgb: 51, 51, 51;
+    --bs-medium-gray-rgb: 136, 136, 136;
 }
 
 /* Corpo e fundo */
@@ -65,6 +66,7 @@ header .btn-outline-light {
 
 .feature {
     background-color: var(--bs-info);
+    color: #90A959;
 }
 
 .feature h2, .feature p, .feature a {
@@ -86,10 +88,6 @@ footer {
     color: var(--bs-white);
 }
 
-/* Gradientes */
-.gradient-blue-green {
-    background: linear-gradient(180deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
-}
 
 .gradient-dark-light {
     background: linear-gradient(180deg, #003366 0%, var(--bs-primary) 100%);
@@ -109,7 +107,7 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff; /* Cor de fundo do botão */
+    background-color: #355C7D; /* Cor de fundo do botão */
     color: white; /* Cor do ícone */
     border-radius: 50%;
     width: 40px; /* Tamanho menor */
@@ -130,7 +128,7 @@ footer {
 
 /* Estilo quando passando o mouse sobre o botão */
 .back-to-top:hover {
-    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #355C7D; /* Cor de fundo do botão ao passar o mouse */
 }
 
 /* Estilo quando o botão está visível */
@@ -161,9 +159,6 @@ footer {
     padding: 1.5rem; /* Espaçamento interno */
 }
 
-.card-body {
-    padding: 2rem; /* Espaçamento interno do corpo do card */
-}
 
 .card-price {
     font-size: 1.5rem; /* Tamanho da fonte do preço */
@@ -184,9 +179,6 @@ footer {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.card-body ul {
-    padding-left: 1.5rem;
-}
 
 .card-body .btn {
     margin-top: 1rem;
@@ -279,12 +271,7 @@ textarea.form-control {
     margin-left: 1rem; /* Espaçamento entre o botão de colapso e o botão "Começar" */
 }
 
-/* Estilo para telas grandes */
-@media (min-width: 992px) {
-    .navbar-brand {
-        flex-grow: 1; /* Faz com que o logo ocupe o espaço disponível à esquerda */
-    }
-}
+
 
 
 /* Estilo para os botões "Começar" na navbar */
@@ -393,7 +380,119 @@ textarea.form-control {
 .custom-modal-footer .btn {
     margin: 0; /* Remove margens adicionais, se houver */
 }
-  
+
+.btn-primary:hover {
+    background-color: #FFB142 !important;
+    border-color: #FFB142 !important;
+}
+
+.featureBtn.btn-primary {
+    background-color: #90A959 !important;
+    border-color: #90A959 !important;
+}
+
+.featureBtn.btn-primary:hover {
+    background-color: #FFB142 !important;
+    border-color: #FFB142 !important;
+}
+
+.fa-ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    padding-left: 0; /* Remove o espaçamento padrão da lista */
+}
+
+.fa-li {
+    position: relative;
+    left: 0; /* Garante que o ícone fique alinhado corretamente */
+}
+
+
+.pricingBtn.btn-primary {
+    background-color: #90A959 !important;
+    border-color: #90A959 !important;
+}
+
+.pricingBtn.btn-primary:hover {
+    background-color: #FFB142 !important;
+    border-color: #FFB142 !important;
+}
+
+/* Definições de estilo para o card */
+.card-custom {
+    border: 1px solid #E63946;
+    background-color: #FFF;
+}
+
+/* Estilo do título do card */
+.card-title-custom {
+    color: #FFB142;
+}
+
+/* Estilo do preço do card */
+.card-price-custom {
+    color: #FFB142;
+}
+
+/* Estilo do texto do card */
+.card-text-custom {
+    color: #2c3e50;
+}
+
+/* Estilo do texto secundário */
+.card-text-secondary {
+    color: #7f8c8d;
+}
+
+/* Estilo da lista de benefícios */
+.card-benefits-list {
+    color: #7f8c8d;
+}
+
+/* Estilo para os ícones de check dentro da lista */
+.card-benefits-list i {
+    color: #FFB142;
+}
+
+/* Estilo para a altura do card */
+.card-height-large {
+    height: 90px;
+}
+
+/* Estilo para o corpo do card */
+.card-body-large {
+    height: 178px;
+}
+
+/* Estilo para os benefícios no card */
+.card-benefits-large {
+    height: 293px;
+}
+
+/* Estilo para os botões de seleção */
+.pricingBtn {
+    background-color: #E63946;
+    color: white;
+    border: none;
+}
+
+.pricingBtn:hover {
+    background-color: #FFB142;
+}
+
+/* Estilos específicos para telas grandes (notebooks, monitores) */
+@media (min-width: 992px) {
+    .card-height-large {
+        height: 90px;
+    }
+
+    .card-body-large {
+        height: 178px;
+    }
+
+    .card-benefits-large {
+        height: 293px;
+    }
+}
 
 
 
