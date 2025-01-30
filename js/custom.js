@@ -48,12 +48,15 @@ function selectAndScroll(plan) {
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
     const nameInput = document.getElementById('name');
+    const establishmentInput = document.getElementById('establishment');
+    const cityInput = document.getElementById('city');
+    const customCityInput = document.getElementById('customCity');
     const emailInput = document.getElementById('email');
     const phoneInput = document.getElementById('phone');
     const planSelect = document.getElementById('plan');
 
     // Adicionar ouvinte de clique ao botão de envio
-    document.getElementById('submitButton').addEventListener('click', function(event) {
+    document.getElementById('submitButton').addEventListener('click', function (event) {
         console.log('Botão de envio clicado');
         let isValid = true;
 
@@ -63,6 +66,30 @@ document.addEventListener('DOMContentLoaded', function () {
             isValid = false;
         } else {
             document.getElementById('name-error').style.display = 'none';
+        }
+
+        // Validação do Estabelecimento
+        if (establishmentInput.value.trim() === '') {
+            document.getElementById('establishment-error').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('establishment-error').style.display = 'none';
+        }
+
+         // Validação da cidade
+         if (cityInput.value.trim() === '') {
+            document.getElementById('city-error').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('city-error').style.display = 'none';
+        }
+
+        // Se for "Outra (especificar)", verificar se foi digitado algo
+        if (cityInput.value === "other" && customCityInput.value.trim() === "") {
+            document.getElementById('customCity-error').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('customCity-error').style.display = 'none';
         }
 
         // Validação do Email
@@ -104,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
     closeButton.addEventListener('click', function () {
         // Limpar campos do formulário
         contactForm.reset();
-        
+
         // Ocultar mensagens de erro
         errorMessages.forEach(function (msg) {
             msg.style.display = 'none';
@@ -113,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
     closeButtonUm.addEventListener('click', function () {
         // Limpar campos do formulário
         contactForm.reset();
-        
+
         // Ocultar mensagens de erro
         errorMessages.forEach(function (msg) {
             msg.style.display = 'none';
@@ -124,13 +151,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-  // Adiciona um event listener a cada link
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      // Remove a classe 'active' de todos os links
-      navLinks.forEach(link => link.classList.remove('active'));
-      
-      // Adiciona a classe 'active' ao link clicado
-      this.classList.add('active');
+// Adiciona um event listener a cada link
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        // Remove a classe 'active' de todos os links
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        // Adiciona a classe 'active' ao link clicado
+        this.classList.add('active');
     });
-  });
+});
+
+
+$(document).ready(function () {
+    $('#city').select2({
+        placeholder: "Pesquise ou selecione uma cidade",
+        allowClear: true
+    });
+});
+
+function toggleCityInput() {
+    const citySelect = document.getElementById("city");
+    const customCityContainer = document.getElementById("customCityContainer");
+    const customCityInput = document.getElementById("customCity");
+
+    if (citySelect.value === "other") {
+        customCityContainer.style.display = "block";
+        customCityInput.required = true;
+    } else {
+        customCityContainer.style.display = "none";
+        customCityInput.required = false;
+        customCityInput.value = "";
+    }
+}
