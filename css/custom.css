@@ -479,6 +479,19 @@ textarea.form-control {
     background-color: #FFB142;
 }
 
+/* Definição padrão para todas as telas */
+.card-height-large {
+    height: auto; /* Ajustável conforme o conteúdo */
+}
+
+.card-body-large {
+    height: auto;
+}
+
+.card-benefits-large {
+    height: auto;
+}
+
 /* Estilos específicos para telas grandes (notebooks, monitores) */
 @media (min-width: 992px) {
     .card-height-large {
