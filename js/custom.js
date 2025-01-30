@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
     const planSelect = document.getElementById('plan');
-    const messageTextarea = document.getElementById('message');
 
     // Adicionar ouvinte de clique ao botão de envio
     document.getElementById('submitButton').addEventListener('click', function(event) {
@@ -73,20 +73,20 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('email-error').style.display = 'none';
         }
 
+        // Validação do phone
+        if (phoneInput.value.trim() === '' || !phoneInput.validity.valid) {
+            document.getElementById('phone-error').style.display = 'block';
+            isValid = false;
+        } else {
+            document.getElementById('phone-error').style.display = 'none';
+        }
+
         // Validação do Plano
         if (planSelect.value === '') {
             document.getElementById('plan-error').style.display = 'block';
             isValid = false;
         } else {
             document.getElementById('plan-error').style.display = 'none';
-        }
-
-        // Validação da Mensagem
-        if (messageTextarea.value.trim() === '') {
-            document.getElementById('message-error').style.display = 'block';
-            isValid = false;
-        } else {
-            document.getElementById('message-error').style.display = 'none';
         }
 
         // Se algum campo não for válido, previne o envio do formulário
@@ -133,19 +133,4 @@ const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
       // Adiciona a classe 'active' ao link clicado
       this.classList.add('active');
     });
-  });
-
-
-  // Seleciona o botão "Começar" no mobile e o menu colapsável
-  const startButton = document.querySelector('.navbar-start-btn.d-lg-none');
-  const navbarCollapse = document.querySelector('.navbar-collapse');
-
-  // Adiciona um event listener ao botão "Começar"
-  startButton.addEventListener('click', function() {
-    // Verifica se o menu colapsável está aberto
-    if (navbarCollapse.classList.contains('show')) {
-      // Remove a classe 'show' para fechar o menu
-      const collapse = new bootstrap.Collapse(navbarCollapse);
-      collapse.hide();
-    }
   });

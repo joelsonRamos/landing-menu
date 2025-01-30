@@ -349,7 +349,7 @@ textarea.form-control {
   }
   
   .custom-btn-submit {
-    background-color: var(--bs-primary); /* Cor de fundo igual ao botão de navegação */
+    background-color: #90A959; /* Cor de fundo igual ao botão de navegação */
     color: #fff; /* Cor do texto */
     padding: 10px 20px; /* Padding do botão */
     border: none; /* Remove a borda */
@@ -359,7 +359,7 @@ textarea.form-control {
 }
 
 .custom-btn-submit:hover {
-    background-color: var(--bs-primary-dark); /* Cor do fundo no hover */
+    background-color: #FFB142; /* Cor do fundo no hover */
 }
 
 .custom-btn-close {
@@ -512,5 +512,54 @@ textarea.form-control {
     }
 }
 
+.custom-modal-content {
+    background-color: #FFF;
+    border-radius: 15px;
+}
+
+.custom-modal-header {
+    border-bottom: 1px solid #FFB142;
+}
+
+.custom-modal-title {
+    color: #FFB142;
+}
+
+.custom-btn-close {
+    background-color: #E63946;
+    color: #FFF;
+    opacity: 0.8;
+}
+
+.custom-modal-body {
+    padding: 20px 30px;
+}
+
+.lead-form {
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.custom-input {
+    margin-top: 2px;
+}
+
+.text-danger {
+    display: none;
+    margin-top: 2px;
+}
+
+.custom-modal-footer {
+    border-top: 1px solid #FFB142;
+}
+
+.custom-btn-submit {
+    background-color: #FFB142;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
 
 
