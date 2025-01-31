@@ -1,13 +1,21 @@
 /* Definindo a paleta de cores personalizada */
 :root {
-    --bs-primary: #355C7D; /* Novo Vermelho */
-    --bs-secondary: #355C7D; /* Novo Azul Escuro */
-    --bs-light: #F5F5F5; /* Novo Laranja */
-    --bs-white: #FFFFFF; /* Branco */
-    --bs-warning: #29D8F; /* Nova Cor de Ação (Corrigida no hex para #029D8F) */
-    --bs-info: #FFF; /* Branco para Destaques */
-    --bs-dark-gray: #333333; /* Cinza Escuro Original */
-    --bs-medium-gray: #888888; /* Cinza Intermediário Original */
+    --bs-primary: #355C7D;
+    /* Novo Vermelho */
+    --bs-secondary: #355C7D;
+    /* Novo Azul Escuro */
+    --bs-light: #F5F5F5;
+    /* Novo Laranja */
+    --bs-white: #FFFFFF;
+    /* Branco */
+    --bs-warning: #29D8F;
+    /* Nova Cor de Ação (Corrigida no hex para #029D8F) */
+    --bs-info: #FFF;
+    /* Branco para Destaques */
+    --bs-dark-gray: #333333;
+    /* Cinza Escuro Original */
+    --bs-medium-gray: #888888;
+    /* Cinza Intermediário Original */
 
     --bs-primary-rgb: 230, 57, 70;
     --bs-secondary-rgb: 53, 92, 125;
@@ -22,7 +30,8 @@
 /* Corpo e fundo */
 body {
     background-color: var(--bs-light);
-    color: var(--bs-dark-gray); /* Mudando cor para cinza escuro */
+    color: var(--bs-dark-gray);
+    /* Mudando cor para cinza escuro */
 }
 
 /* Navbar */
@@ -66,7 +75,8 @@ header .btn-outline-light {
 /* Seção de Características */
 #features {
     background-color: var(--bs-white);
-    color: var(--bs-dark-gray); /* Mudando cor para cinza escuro */
+    color: var(--bs-dark-gray);
+    /* Mudando cor para cinza escuro */
 }
 
 .feature {
@@ -75,7 +85,8 @@ header .btn-outline-light {
 }
 
 .feature h2, .feature p, .feature a {
-    color: var(--bs-dark-gray); /* Mudando cor para cinza escuro */
+    color: var(--bs-dark-gray);
+    /* Mudando cor para cinza escuro */
 }
 
 /* Seção de Preços */
@@ -84,7 +95,8 @@ header .btn-outline-light {
 }
 
 h2.fw-bolder, p.lead {
-    color: var(--bs-dark-gray); /* Mudando cor para cinza escuro */
+    color: var(--bs-dark-gray);
+    /* Mudando cor para cinza escuro */
 }
 
 /* Footer */
@@ -99,8 +111,10 @@ footer {
 }
 
 .navbar-toggler-custom {
-    padding: 0.25rem 0.5rem; /* Ajusta o tamanho do padding */
-    font-size: 0.75rem; /* Diminui o ícone */
+    padding: 0.25rem 0.5rem;
+    /* Ajusta o tamanho do padding */
+    font-size: 0.75rem;
+    /* Diminui o ícone */
 }
 
 .justificado {
@@ -112,15 +126,15 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #355C7D; /* Cor de fundo do botão */
-    color: white; /* Cor do ícone */
+    background-color: #355C7D;
+    color: white;
     border-radius: 50%;
-    width: 40px; /* Tamanho menor */
-    height: 40px; /* Tamanho menor */
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px; /* Tamanho menor do ícone */
+    font-size: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -128,12 +142,14 @@ footer {
 }
 
 .back-to-top i {
-    color: white; /* Garante que o ícone dentro do botão fique branco */
+    color: white;
+    /* Garante que o ícone dentro do botão fique branco */
 }
 
 /* Estilo quando passando o mouse sobre o botão */
 .back-to-top:hover {
-    background-color: #355C7D; /* Cor de fundo do botão ao passar o mouse */
+    background-color: #355C7D;
+    /* Cor de fundo do botão ao passar o mouse */
 }
 
 /* Estilo quando o botão está visível */
@@ -143,7 +159,8 @@ footer {
 
 
 .about-image img {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave para a imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave para a imagem */
 }
 
 /* Ajustes para responsividade */
@@ -159,18 +176,23 @@ footer {
 }
 
 .card {
-    border: 1px solid #ddd; /* Cor da borda */
-    border-radius: 0.5rem; /* Arredondamento dos cantos */
-    padding: 1.5rem; /* Espaçamento interno */
+    border: 1px solid #ddd;
+    /* Cor da borda */
+    border-radius: 0.5rem;
+    /* Arredondamento dos cantos */
+    padding: 1.5rem;
+    /* Espaçamento interno */
 }
 
 
 .card-price {
-    font-size: 1.5rem; /* Tamanho da fonte do preço */
+    font-size: 1.5rem;
+    /* Tamanho da fonte do preço */
 }
 
 .card-title {
-    font-size: 1.25rem; /* Tamanho da fonte do título */
+    font-size: 1.25rem;
+    /* Tamanho da fonte do título */
 }
 
 .custom-card {
@@ -189,6 +211,10 @@ footer {
     margin-top: 1rem;
 }
 
+.card-pricing {
+    width: 470px;
+}
+
 
 /* Estilos gerais para os campos de formulário */
 .form-control {
@@ -196,14 +222,18 @@ footer {
     border: 1px solid #ddd;
     box-shadow: none;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    padding: 0.75rem 1rem; /* Ajusta o padding para melhor espaçamento interno */
-    font-size: 0.875rem; /* Ajusta o tamanho da fonte do campo */
+    padding: 0.75rem 1rem;
+    /* Ajusta o padding para melhor espaçamento interno */
+    font-size: 0.875rem;
+    /* Ajusta o tamanho da fonte do campo */
 }
 
 /* Reduz o tamanho do texto do placeholder */
 .form-control::placeholder {
-    font-size: 1rem; /* Reduz o tamanho da fonte do placeholder */
-    color: var(--bs-medium-gray); /* Ajusta a cor, se necessário */
+    font-size: 1rem;
+    /* Reduz o tamanho da fonte do placeholder */
+    color: var(--bs-medium-gray);
+    /* Ajusta a cor, se necessário */
 }
 
 /* Estilos para labels flutuantes */
@@ -211,8 +241,8 @@ footer {
     position: relative;
 }
 
-.form-control:focus + label,
-.form-control:not(:placeholder-shown) + label {
+.form-control:focus+label,
+.form-control:not(:placeholder-shown)+label {
     top: -0.75rem;
     left: 0.15rem;
     font-size: 0.875rem;
@@ -221,59 +251,79 @@ footer {
 
 /* Estilizando os labels */
 .form-group label {
-    font-weight: bold; /* Deixa o texto mais destacado */
-    color: var(--bs-dark-gray); /* Cor escura para maior contraste */
-    display: block; /* Garante que o label ocupe toda a largura disponível */
-    margin-bottom: 0.5rem; /* Espaçamento abaixo do label */
-    position: relative; /* Para adicionar um efeito de foco */
-    font-size: 0.875rem; /* Ajusta o tamanho da fonte do label */
+    font-weight: bold;
+    /* Deixa o texto mais destacado */
+    color: var(--bs-dark-gray);
+    /* Cor escura para maior contraste */
+    display: block;
+    /* Garante que o label ocupe toda a largura disponível */
+    margin-bottom: 0.5rem;
+    /* Espaçamento abaixo do label */
+    position: relative;
+    /* Para adicionar um efeito de foco */
+    font-size: 0.875rem;
+    /* Ajusta o tamanho da fonte do label */
 }
 
-.form-group input:focus + label,
-.form-group textarea:focus + label {
-    color: var(--bs-primary); /* Cor quando o campo está focado */
-    transform: translateY(-1.5rem); /* Move o label para cima ao focar */
-    font-size: 0.8rem; /* Reduz o tamanho da fonte do label quando o campo está focado */
+.form-group input:focus+label,
+.form-group textarea:focus+label {
+    color: var(--bs-primary);
+    /* Cor quando o campo está focado */
+    transform: translateY(-1.5rem);
+    /* Move o label para cima ao focar */
+    font-size: 0.8rem;
+    /* Reduz o tamanho da fonte do label quando o campo está focado */
 }
 
 /* Adicionando efeito de foco ao campo */
 .form-control:focus {
-    border-color: var(--bs-primary); /* Cor da borda ao focar */
-    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25); /* Efeito de sombra */
+    border-color: var(--bs-primary);
+    /* Cor da borda ao focar */
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+    /* Efeito de sombra */
 }
 
 
 textarea.form-control {
-    width: 100%; /* Garante que o textarea use toda a largura disponível */
-    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    width: 100%;
+    /* Garante que o textarea use toda a largura disponível */
+    box-sizing: border-box;
+    /* Inclui padding e borda no cálculo da largura */
 }
 
 .lead-form {
-    font-size: 1rem; /* Ajuste o tamanho da fonte */
-    line-height: 1.5; /* Ajusta a altura da linha */
-    margin-bottom: 1rem; /* Ajusta o espaçamento abaixo do parágrafo */
+    font-size: 1rem;
+    /* Ajuste o tamanho da fonte */
+    line-height: 1.5;
+    /* Ajusta a altura da linha */
+    margin-bottom: 1rem;
+    /* Ajusta o espaçamento abaixo do parágrafo */
 }
 
 /* Estilo para a navbar */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Garante que o logo e a navbar-right sejam separados */
+    justify-content: space-between;
+    /* Garante que o logo e a navbar-right sejam separados */
 }
 
 /* Estilo para a navbar-right */
 .navbar-right {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Faz com que a navbar-right fique na extremidade direita */
+    margin-left: auto;
+    /* Faz com que a navbar-right fique na extremidade direita */
 }
 
 /* Estilo específico para o botão "Começar" e navbar-toggler */
 .navbar-start-btn {
-    margin-left: 1rem; /* Espaçamento entre os botões */
+    margin-left: 1rem;
+    /* Espaçamento entre os botões */
 }
 
 .navbar-toggler-custom {
-    margin-left: 1rem; /* Espaçamento entre o botão de colapso e o botão "Começar" */
+    margin-left: 1rem;
+    /* Espaçamento entre o botão de colapso e o botão "Começar" */
 }
 
 
@@ -281,19 +331,25 @@ textarea.form-control {
 
 /* Estilo para os botões "Começar" na navbar */
 .navbar-start-btn {
-    background-color: var(--bs-warning) !important; /* Laranja */
-    border-color: var(--bs-warning) !important; /* Laranja */
-    color: var(--bs-white) !important; /* Cor do texto branco */
+    background-color: var(--bs-warning) !important;
+    /* Laranja */
+    border-color: var(--bs-warning) !important;
+    /* Laranja */
+    color: var(--bs-white) !important;
+    /* Cor do texto branco */
 }
 
 .navbar-start-btn:hover {
-    background-color: darken(var(--bs-warning), 10%) !important; /* Escurece a cor ao passar o mouse */
-    border-color: darken(var(--bs-warning), 10%) !important; /* Escurece a borda ao passar o mouse */
+    background-color: darken(var(--bs-warning), 10%) !important;
+    /* Escurece a cor ao passar o mouse */
+    border-color: darken(var(--bs-warning), 10%) !important;
+    /* Escurece a borda ao passar o mouse */
 }
 
 /* Garantir que os botões estejam alinhados à direita */
 .navbar .navbar-buttons {
-    margin-left: auto !important; /* Alinha os botões à direita */
+    margin-left: auto !important;
+    /* Alinha os botões à direita */
     margin-right: 0.5rem !important;
 }
 
@@ -306,21 +362,28 @@ textarea.form-control {
 
 /* Se o contêiner de botões ainda não se mover, ajuste o estilo */
 .navbar .navbar-buttons {
-    display: flex; /* Certifique-se de que o contêiner de botões usa flexbox */
-    margin-left: auto !important; /* Força o alinhamento à direita */
+    display: flex;
+    /* Certifique-se de que o contêiner de botões usa flexbox */
+    margin-left: auto !important;
+    /* Força o alinhamento à direita */
 }
 
 @media (max-width: 400px) {
     .btn-comecar {
-        font-size: 1rem; /* Ajustar o tamanho do texto do botão */
-        padding: 0.8rem 1.5rem; /* Reduzir o padding para caber melhor */
+        font-size: 1rem;
+        /* Ajustar o tamanho do texto do botão */
+        padding: 0.8rem 1.5rem;
+        /* Reduzir o padding para caber melhor */
     }
+
     h1 {
-        font-size: 1.8rem; /* Ajuste conforme necessário */
+        font-size: 1.8rem;
+        /* Ajuste conforme necessário */
     }
 
     p {
-        font-size: 1rem; /* Diminuir o texto do parágrafo */
+        font-size: 1rem;
+        /* Diminuir o texto do parágrafo */
     }
 }
 
@@ -328,62 +391,85 @@ textarea.form-control {
 .custom-header-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o texto */
-  }
-  
-  .custom-modal-title {
+    align-items: center;
+    /* Centraliza o texto */
+}
+
+.custom-modal-title {
     font-size: 24px;
     font-weight: bold;
-    color: #3d48ba; /* Cor do título */
-  }
-  
-  .custom-header-content p {
-    font-size: 16px; /* Ajuste o tamanho do subtítulo */
-    margin-top: 8px; /* Espaço entre o título e o subtítulo */
-  }
-  
+    color: #3d48ba;
+    /* Cor do título */
+}
 
-  .custom-input {
+.custom-header-content p {
+    font-size: 16px;
+    /* Ajuste o tamanho do subtítulo */
+    margin-top: 8px;
+    /* Espaço entre o título e o subtítulo */
+}
+
+
+.custom-input {
     border-radius: 10px;
     border: 1px solid #ccc;
-  }
-  
-  .custom-btn-submit {
-    background-color: #90A959; /* Cor de fundo igual ao botão de navegação */
-    color: #fff; /* Cor do texto */
-    padding: 10px 20px; /* Padding do botão */
-    border: none; /* Remove a borda */
-    border-radius: 0.25rem; /* Raio da borda */
-    font-size: 16px; /* Tamanho da fonte */
-    transition: background-color 0.3s ease; /* Transição para o hover */
+}
+
+.custom-btn-submit {
+    background-color: #90A959;
+    /* Cor de fundo igual ao botão de navegação */
+    color: #fff;
+    /* Cor do texto */
+    padding: 10px 20px;
+    /* Padding do botão */
+    border: none;
+    /* Remove a borda */
+    border-radius: 0.25rem;
+    /* Raio da borda */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    transition: background-color 0.3s ease;
+    /* Transição para o hover */
 }
 
 .custom-btn-submit:hover {
-    background-color: #FFB142; /* Cor do fundo no hover */
+    background-color: #FFB142;
+    /* Cor do fundo no hover */
 }
 
 .custom-btn-close {
-    background-color: red; /* Cor de fundo vermelha */
-    color: #fff; /* Cor do texto */
-    border: none; /* Remove a borda */
-    border-radius: 0.25rem; /* Raio da borda */
-    padding: 10px; /* Padding do botão */
-    font-size: 16px; /* Tamanho da fonte */
+    background-color: red;
+    /* Cor de fundo vermelha */
+    color: #fff;
+    /* Cor do texto */
+    border: none;
+    /* Remove a borda */
+    border-radius: 0.25rem;
+    /* Raio da borda */
+    padding: 10px;
+    /* Padding do botão */
+    font-size: 16px;
+    /* Tamanho da fonte */
 }
 
 .custom-btn-close:hover {
-    background-color: darkred; /* Cor de fundo no hover */
+    background-color: darkred;
+    /* Cor de fundo no hover */
 }
-  
+
 .custom-modal-footer {
-    display: flex; /* Define o layout flexível */
-    justify-content: flex-end; /* Alinha os botões ao final do rodapé */
-    gap: 0.5rem; /* Ajusta o espaçamento entre os botões */
+    display: flex;
+    /* Define o layout flexível */
+    justify-content: flex-end;
+    /* Alinha os botões ao final do rodapé */
+    gap: 0.5rem;
+    /* Ajusta o espaçamento entre os botões */
 }
 
 /* Ajuste adicional para os botões, se necessário */
 .custom-modal-footer .btn {
-    margin: 0; /* Remove margens adicionais, se houver */
+    margin: 0;
+    /* Remove margens adicionais, se houver */
 }
 
 .btn-primary:hover {
@@ -402,13 +488,16 @@ textarea.form-control {
 }
 
 .fa-ul {
-    list-style: none; /* Remove as bolinhas da lista */
-    padding-left: 0; /* Remove o espaçamento padrão da lista */
+    list-style: none;
+    /* Remove as bolinhas da lista */
+    padding-left: 0;
+    /* Remove o espaçamento padrão da lista */
 }
 
 .fa-li {
     position: relative;
-    left: 0; /* Garante que o ícone fique alinhado corretamente */
+    left: 0;
+    /* Garante que o ícone fique alinhado corretamente */
 }
 
 
@@ -484,34 +573,6 @@ textarea.form-control {
     background-color: #FFB142;
 }
 
-/* Definição padrão para todas as telas */
-.card-height-large {
-    height: auto; /* Ajustável conforme o conteúdo */
-}
-
-.card-body-large {
-    height: auto;
-}
-
-.card-benefits-large {
-    height: auto;
-}
-
-/* Estilos específicos para telas grandes (notebooks, monitores) */
-@media (min-width: 992px) {
-    .card-height-large {
-        height: 90px;
-    }
-
-    .card-body-large {
-        height: 178px;
-    }
-
-    .card-benefits-large {
-        height: 293px;
-    }
-}
-
 .custom-modal-content {
     background-color: #FFF;
     border-radius: 15px;
@@ -563,3 +624,24 @@ textarea.form-control {
 }
 
 
+/* Estilos base (para todas as telas) */
+.card-height-large,
+.card-body-large,
+.card-benefits-large {
+    height: auto !important;
+}
+
+/* Estilos para notebooks com telas menores (680px a 991px)*/
+@media (min-width: 992px) {
+    .card-height-large {
+        height: 90px !important;
+    }
+
+    .card-body-large {
+        height: 178px !important;
+    }
+
+    .card-benefits-large {
+        height: 300px !important;
+    }
+}

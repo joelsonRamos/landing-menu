@@ -41,8 +41,7 @@ function selectAndScroll(plan) {
     var selectElement = document.getElementById('plan');
     selectElement.value = plan;
 
-    // Rola para a seção de contato
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -159,14 +158,6 @@ navLinks.forEach(link => {
 
         // Adiciona a classe 'active' ao link clicado
         this.classList.add('active');
-    });
-});
-
-
-$(document).ready(function () {
-    $('#city').select2({
-        placeholder: "Pesquise ou selecione uma cidade",
-        allowClear: true
     });
 });
 
