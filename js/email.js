@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Enviar os dados para a API /api/sendEmail.js
         try {
-            const response = await fetch('/api/sendEmail', {
+            const response = await fetch(`${window.location.origin}/api/sendEmail`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
