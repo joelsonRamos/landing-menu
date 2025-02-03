@@ -33,7 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 body: JSON.stringify(formData)
             });
 
-            const result = await response.json();
+            let result;
+            try {
+                result = await response.json();
+            } catch (error) {
+                // Se não for possível fazer o parse para JSON, retorna uma mensagem de erro
+                result = { success: false, message: 'Resposta inválida da API' };
+            }
 
             if (response.ok && result.success) {
                 console.log('Success:', result);
