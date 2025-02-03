@@ -12,8 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
         submitButton.disabled = true;
         statusMessage.style.display = "none"; // Esconde qualquer mensagem anterior
 
+        const cityValue = document.getElementById("city").value === "other" ?
+                          document.getElementById("customCity").value :
+                          document.getElementById("city").value;
+
         const formData = {
             name: document.getElementById("name").value,
+            establishment: document.getElementById("establishment").value,
+            city: cityValue, // Agora inclui a cidade personalizada, se necessário
             email: document.getElementById("email").value,
             phone: document.getElementById("phone").value,
             plan: document.getElementById("plan").value,
