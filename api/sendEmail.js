@@ -43,11 +43,11 @@ export default async function handler(req, res) {
         // Log de erro para ajudar a depurar
         console.error('Erro ao enviar e-mail:', error);
 
-        
+        const errorMessage = error.message || 'Erro desconhecido';
 
         return res.status(500).json({
             success: false,
-            message: `Erro ao enviar o e-mail: ${error.message}`,
+            message: `Erro ao enviar o e-mail: ${errorMessage}`,
         });
     }
 }
