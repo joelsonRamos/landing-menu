@@ -27,10 +27,10 @@ export default async function handler(req, res) {
     try {
         // Envia o e-mail usando o EmailJS
         const response = await emailjs.send(
-            process.env.EMAILJS_SERVICE_ID, // Service ID
-            process.env.EMAILJS_TEMPLATE_ID, // Template ID
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Service ID
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, // Template ID
             { name, establishment, city, email, phone, plan, message }, // Dados para o template
-            process.env.EMAILJS_USER_ID // User ID
+            process.env.NEXT_PUBLIC_EMAILJS_USER_ID // User ID
         );
 
         // Verifica se o e-mail foi enviado com sucesso
