@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const submitButton = document.getElementById("submitButton");
     const statusMessage = document.getElementById("statusMessage");
 
+    // Inicializar o EmailJS
+    emailjs.init("TXPJ_3uAxe0tn09aF"); // Substitua com seu User ID do EmailJS
+
     form.addEventListener("submit", async function (event) {
         event.preventDefault();
         submitButton.innerText = "Enviando...";
@@ -23,44 +26,26 @@ document.addEventListener("DOMContentLoaded", function () {
             message: document.getElementById("message").value,
         };
 
-        // Enviar os dados para a API /api/sendEmail.js
+        // Enviar o e-mail usando o EmailJS
         try {
-            const response = await fetch('/api/sendEmail', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
+            const response = await emailjs.send("service_6h3yd7m", "template_ltu9h9f", formData);
+            console.log('Success:', response);
 
-            let result;
-            try {
-                result = await response.json();
-            } catch (error) {
-                // Se não for possível fazer o parse para JSON, retorna uma mensagem de erro
-                result = { success: false, message: 'Resposta inválida da API' };
-            }
+            // Exibe a mensagem de sucesso
+            statusMessage.innerHTML = "Mensagem enviada com sucesso!";
+            statusMessage.classList.add("text-success");
+            statusMessage.classList.remove("text-danger");
+            statusMessage.style.display = "block";
 
-            if (response.ok && result.success) {
-                console.log('Success:', result);
+            // Exibe o toast de sucesso
+            const toast = new bootstrap.Toast(document.getElementById("successToast"));
+            toast.show();
 
-                // Exibe a mensagem de sucesso
-                statusMessage.innerHTML = "Mensagem enviada com sucesso!";
-                statusMessage.classList.add("text-success");
-                statusMessage.classList.remove("text-danger");
-                statusMessage.style.display = "block";
+            // Após 3 segundos, faz o reload da página
+            setTimeout(function () {
+                window.location.reload();
+            }, 3000);
 
-                // Exibe o toast de sucesso
-                const toast = new bootstrap.Toast(document.getElementById("successToast"));
-                toast.show();
-
-                // Após 3 segundos, recarrega a página
-                setTimeout(function () {
-                    window.location.reload();
-                }, 3000);
-            } else {
-                throw new Error(result.message || 'Erro ao enviar o e-mail.');
-            }
         } catch (error) {
             console.error('Error:', error);
 
