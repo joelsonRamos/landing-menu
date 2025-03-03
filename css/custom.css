@@ -1,4 +1,9 @@
 /* Definindo a paleta de cores personalizada */
+@font-face {
+    font-family: 'Bootstrap Icons';
+    src: url('https://cdn.jsdelivr.net/npm/bootstrap-icons/font/fonts/bootstrap-icons.woff2') format('woff2');
+    font-display: swap; /* Garante que o texto use a fonte fallback até que a fonte personalizada seja carregada */
+}
 :root {
     --bs-primary: #355C7D;
     /* Novo Vermelho */
@@ -482,6 +487,8 @@ textarea.form-control {
 .btn-primary:hover {
     background-color: #FFB142 !important;
     border-color: #FFB142 !important;
+    color: #000 !important;
+
 }
 
 .featureBtn.btn-primary {
