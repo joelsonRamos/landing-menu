@@ -519,6 +519,7 @@ textarea.form-control {
 .pricingBtn.btn-primary {
     background-color: #90A959 !important;
     border-color: #90A959 !important;
+    color: #000;
 }
 
 .pricingBtn.btn-primary:hover {
