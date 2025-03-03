@@ -494,6 +494,7 @@ textarea.form-control {
 .featureBtn.btn-primary {
     background-color: #90A959 !important;
     border-color: #90A959 !important;
+    color: #000 !important;
 }
 
 .featureBtn.btn-primary:hover {
