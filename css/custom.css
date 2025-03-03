@@ -72,6 +72,13 @@ header .btn-outline-light {
     margin-bottom: 3rem;
 }
 
+#header {
+    position: relative;
+    background: url('assets/image/restaurante.webp') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 /* Seção de Características */
 #features {
     background-color: var(--bs-white);
@@ -645,3 +652,4 @@ textarea.form-control {
         height: 300px !important;
     }
 }
+
