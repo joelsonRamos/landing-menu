@@ -534,12 +534,12 @@ textarea.form-control {
 
 /* Estilo do título do card */
 .card-title-custom {
-    color: #FFB142;
+    color: #000;
 }
 
 /* Estilo do preço do card */
 .card-price-custom {
-    color: #FFB142;
+    color: #000;
 }
 
 /* Estilo do texto do card */
@@ -549,12 +549,12 @@ textarea.form-control {
 
 /* Estilo do texto secundário */
 .card-text-secondary {
-    color: #7f8c8d;
+    color: #2c3e50;
 }
 
 /* Estilo da lista de benefícios */
 .card-benefits-list {
-    color: #7f8c8d;
+    color: #2c3e50;
 }
 
 /* Estilo para os ícones de check dentro da lista */
